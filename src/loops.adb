@@ -40,4 +40,17 @@ begin
       TIO.Put_Line (Suit'Image (Test_Suit));
    end loop;
 
+   for I in 1.. Inner_Index loop
+      TIO.Put_Line(Integer'Image(I));
+      Inner_Index := 50;
+   end loop;
+
+   for I in Integer range 1.. Inner_Index loop
+      if I rem 2 = 0 then goto Continue_Here; end if;
+      TIO.Put_Line(Integer'Image(I));
+      Inner_Index :=50;
+      <<Continue_Here>>
+   end loop;
+
+
 end Loops;
