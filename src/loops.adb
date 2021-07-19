@@ -22,6 +22,16 @@ begin
       TIO.New_Line;
    end loop Outer;
    TIO.Put_Line
-     ("Named Loops Outer:" & Integer'Image (Outer_Index) &
-      " Inner:" & Integer'Image (Inner_Index));
+     ("Named Loops Outer:" & Integer'Image (Outer_Index) & " Inner:" &
+      Integer'Image (Inner_Index));
+
+   TIO.Put_Line ("Suit List ");
+   for Test_Suit in reverse Suit loop
+      TIO.Put_Line (Suit'Image (Test_Suit));
+   end loop;
+
+   TIO.Put_Line("Implicit constrained type Clubs .. Spades");
+   for Test_Suit in Clubs .. Spades loop
+      TIO.Put_Line (Suit'Image (Test_Suit));
+   end loop;
 end Loops;
