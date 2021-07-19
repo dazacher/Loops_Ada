@@ -34,4 +34,10 @@ begin
    for Test_Suit in Clubs .. Spades loop
       TIO.Put_Line (Suit'Image (Test_Suit));
    end loop;
+
+   TIO.Put_Line("Explicit constrained Suit Hearts..Spades ");
+   for Test_Suit in Suit range Hearts .. Spades loop
+      TIO.Put_Line (Suit'Image (Test_Suit));
+   end loop;
+
 end Loops;
